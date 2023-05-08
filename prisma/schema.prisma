@@ -1,0 +1,30 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model AcctCategory {
+  id         BigInt   @id(map: "pk_acct_category") @default(autoincrement())
+  acctTypeId BigInt   @map("acct_type_id")
+  name       String   @db.VarChar(10)
+  icon       String   @db.VarChar(200)
+  sort       BigInt
+  acctType   AcctType @relation(fields: [acctTypeId], references: [id])
+
+  @@map("acct_category")
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model AcctType {
+  id             BigInt         @id(map: "pk_acct_type") @default(autoincrement())
+  typeName       String         @map("type_name") @db.VarChar(10)
+  sort           BigInt
+  acctCategories AcctCategory[]
+
+  @@map("acct_type")
+}

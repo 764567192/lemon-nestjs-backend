@@ -1,0 +1,27 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type AcctCategory {
+  id: BigInt!
+  acctTypeId: BigInt!
+  sort: BigInt!
+  name: String!
+  icon: String!
+}
+
+"""
+The `BigInt` scalar type represents non-fractional signed whole numeric values.
+"""
+scalar BigInt
+
+type AcctType {
+  id: BigInt!
+  sort: BigInt!
+  acctCategories: [AcctCategory!]!
+  typeName: String!
+}
+
+type Query {
+  acctTypes: [AcctType!]!
+}
