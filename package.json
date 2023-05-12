@@ -21,8 +21,8 @@
   },
   "dependencies": {
     "@mercuriusjs/gateway": "^1.2.0",
-    "@nestjs/common": "^9.0.0",
-    "@nestjs/core": "^9.0.0",
+    "@nestjs/common": "^9.4.0",
+    "@nestjs/core": "^9.4.0",
     "@nestjs/graphql": "^11.0.5",
     "@nestjs/mercurius": "^11.0.5",
     "@nestjs/platform-fastify": "^9.4.0",
