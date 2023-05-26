@@ -7,10 +7,6 @@ export class AcctTypeService {
   constructor(private prisma: PrismaService) {}
 
   async findAll(): Promise<AcctType[]> {
-    return this.prisma.acctType.findMany({
-      include: {
-        acctCategories: true,
-      },
-    });
+    return await this.prisma.acctType.findMany();
   }
 }
