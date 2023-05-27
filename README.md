@@ -71,3 +71,7 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](LICENSE).
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=alexbei/lemon_flutter&type=Timeline)](https://star-history.com/#alexbei/lemon_flutter&Timeline)
