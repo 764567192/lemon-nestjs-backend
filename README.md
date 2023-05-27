@@ -16,10 +16,6 @@
 
 
 
----
-
-
-
 ## 介绍
 
 **Lemon NestJS Backend (柠檬记账-NestJS 后端)** 是一个开源的个人记账项目后端，它使用了最新的技术栈，包括 NestJS + GraphQL + Fastify + Prisma + TypeScript + PostgreSQL 等，为用户提供了一个高效、灵活、易用的个人记账服务。它可以让用户记录各种吃喝玩乐的场景，以及社交场景中的收支情况，让记账变得像呼吸一样自然。
@@ -28,12 +24,12 @@
 
 ## 特性
 
-- 使用 **NestJS** ，一个基于 TypeScript 的 Node.js 框架，提供了一个高层次的抽象，简化了常见的开发任务，如认证、授权、数据库访问等。
-- 使用 **GraphQL** ，一个用于构建 API 的查询语言，让客户端可以准确地获取所需的数据，避免过度或不足的请求。
-- 使用 **Fastify** ，一个高性能的 Node.js HTTP 服务器框架，支持异步和同步代码，提供了丰富的插件和生态系统。
-- 使用 **Prisma** ，一个用于访问和管理 PostgreSQL 数据库的 ORM 工具，并且支持多种数据库。
-- 使用 **TypeScript** ，一个 JavaScript 的超集，提供了静态类型检查、类、接口等特性，提高了代码的可读性和可维护性。
-- 使用 **PostgreSQL** ，一个开源的关系型数据库系统，支持复杂的查询、事务、并发控制等特性。
+- 使用 **NestJS** ，一个简化 Node.js 开发的 TypeScript 框架。
+- 使用 **GraphQL** ，一个让客户端精确获取数据的 API 查询语言。
+- 使用 **Fastify** ，一个高性能的 Node.js HTTP 服务器框架。
+- 使用 **Prisma** ，一个支持多种数据库的 ORM 工具。
+- 使用 **TypeScript** ，一个提供静态类型检查的 JavaScript 超集。
+- 使用 **PostgreSQL** ，一个开源的关系型数据库系统。
 
 
 
