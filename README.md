@@ -74,4 +74,4 @@ Nest is [MIT licensed](LICENSE).
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=alexbei/lemon_flutter&type=Timeline)](https://star-history.com/#alexbei/lemon_flutter&Timeline)
+[![Star History Chart](https://api.star-history.com/svg?repos=alexbei/lemon-nestjs-backend&type=Date)](https://star-history.com/#alexbei/lemon-nestjs-backend&Date)
