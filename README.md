@@ -2,8 +2,8 @@
     <img src="https://raw.githubusercontent.com/alexbei/lemon-docs/main/images/logo/lemon-nestjs-logo-round.png" alt=logo" width="200" height="200" />
 </p>
 
-<h1 align="center" style="margin: 30px 0 30px; font-weight: bold;">Lemon NestJS Backend (柠檬记账-NestJS 后端)</h1>
-<h3 align="center">柠檬记账，让您的记账更简单、更高效、更有趣！</h3>
+<h1 align="center" style="margin: 30px 0 30px; font-weight: bold;">Lemon NestJS Backend</h1>
+<h3 align="center">柠檬记账-NestJS 后端，让您的记账更简单、更高效、更有趣！</h3>
 <h5 align="center">Lemon NestJS Backend 是一个使用前沿技术栈打造的开源个人记账项目后端，让用户可以的轻松记录生活和社交中的收支情况。</h5>
 
 <p align="center">    
