@@ -6,7 +6,7 @@ import { AcctType } from './models/acct-type.model';
 export class AcctTypeService {
   constructor(private prisma: PrismaService) {}
 
-  async findAllByType(type: number): Promise<AcctType[]> {
-    return await this.prisma.acctType.findMany({ where: { type: type } });
-  }
+  // async findAllByType(type: number): Promise<AcctType[]> {
+  //   return await this.prisma.acctType.findMany({ where: { type: type } });
+  // }
 }

@@ -6,10 +6,10 @@ import { AcctType } from './models/acct-type.model';
 export class AcctTypeResolver {
   constructor(private readonly acctTypeService: AcctTypeService) {}
 
-  @Query(() => [AcctType])
-  async acctTypes(
-    @Args('type', { type: () => Int }) type: number,
-  ): Promise<AcctType[]> {
-    return this.acctTypeService.findAllByType(type);
-  }
+  // @Query(() => [AcctType])
+  // async acctTypes(
+  //   @Args('type', { type: () => Int }) type: number,
+  // ): Promise<AcctType[]> {
+  //   return this.acctTypeService.findAllByType(type);
+  // }
 }

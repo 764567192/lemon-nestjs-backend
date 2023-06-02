@@ -7,7 +7,6 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
 model AcctType {
   id         BigInt   @id(map: "acct_type_pk") @default(autoincrement())
   type       Int      @db.SmallInt
@@ -19,4 +18,16 @@ model AcctType {
 
   @@unique([type, sort], map: "acct_type_pk2")
   @@map("acct_type")
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model LedgerDetail {
+  id         BigInt   @id(map: "pk_ledger_detail") @default(autoincrement())
+  acctTypeId BigInt   @map("acct_type_id")
+  amount     Decimal  @db.Decimal(72, 18)
+  remark     String?  @db.VarChar(255)
+  createTime DateTime @map("create_time") @db.Timestamptz(6)
+  updateTime DateTime @map("update_time") @db.Timestamptz(6)
+
+  @@map("ledger_detail")
 }
