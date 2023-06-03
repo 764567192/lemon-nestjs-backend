@@ -10,7 +10,9 @@ export class LedgerDetail {
   id: bigint;
 
   @Field(() => GraphQLBigInt)
-  acctTypeId: bigint;
+  detailCategoryId: bigint;
+
+  detailType: number;
 
   @Field(() => GraphQLString)
   amount: Decimal;

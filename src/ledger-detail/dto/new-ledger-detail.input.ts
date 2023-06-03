@@ -6,7 +6,9 @@ import { GraphQLBigInt } from 'graphql-scalars';
 @InputType()
 export class NewLedgerDetailInput {
   @Field(() => GraphQLBigInt)
-  acctTypeId: bigint;
+  detailCategoryId: bigint;
+
+  detailType: number;
 
   @Field(() => GraphQLString)
   amount: Decimal;

@@ -5,11 +5,12 @@
 """LedgerDetail"""
 type LedgerDetail {
   id: BigInt!
-  acctTypeId: BigInt!
+  detailCategoryId: BigInt!
   amount: String!
   remark: String
   createTime: GraphqlTimestamp!
   updateTime: GraphqlTimestamp!
+  detailType: Int!
 }
 
 """
@@ -19,7 +20,18 @@ scalar BigInt
 
 scalar GraphqlTimestamp
 
+type DetailCategory {
+  id: BigInt!
+  sort: BigInt!
+  createTime: GraphqlTimestamp!
+  updateTime: GraphqlTimestamp!
+  detailType: Int!
+  icon: String!
+  iconName: String!
+}
+
 type Query {
+  detailCategories(detailType: Int!): [DetailCategory!]!
   ledgerDetails: [LedgerDetail!]!
 }
 
@@ -28,7 +40,8 @@ type Mutation {
 }
 
 input NewLedgerDetailInput {
-  acctTypeId: BigInt!
+  detailCategoryId: BigInt!
   amount: String!
+  detailType: Int!
   remark: String
 }

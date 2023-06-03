@@ -4,9 +4,9 @@ import { AppService } from './app.service';
 import { GraphQLModule } from '@nestjs/graphql';
 import { MercuriusDriver, MercuriusDriverConfig } from '@nestjs/mercurius';
 import { join } from 'path';
-import { AcctTypeModule } from './acct-type/acct-type.module';
 import { LedgerDetailModule } from './ledger-detail/ledger-detail.module';
 import { CustomGraphqlTimestampScalar } from './common/scalars/graphql-timestamp.scalar';
+import { DetailCategoryModule } from './detail-category/detail-category.module';
 
 @Module({
   imports: [
@@ -23,7 +23,7 @@ import { CustomGraphqlTimestampScalar } from './common/scalars/graphql-timestamp
       },
     }),
     // 模块
-    AcctTypeModule,
+    DetailCategoryModule,
     LedgerDetailModule,
   ],
   controllers: [AppController],
