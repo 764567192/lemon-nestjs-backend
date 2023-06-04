@@ -6,5 +6,6 @@ import { DetailCategoryService } from './detail-category.service';
 @Module({
   providers: [DetailCategoryResolver, DetailCategoryService],
   imports: [PrismaModule],
+  exports: [DetailCategoryService],
 })
 export class DetailCategoryModule {}

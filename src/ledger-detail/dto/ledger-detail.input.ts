@@ -1,40 +1,40 @@
-import { Field, ObjectType } from '@nestjs/graphql';
+import { Field, InputType } from '@nestjs/graphql';
 import { GraphQLString } from 'graphql/type';
 import { GraphQLBigInt } from 'graphql-scalars';
 import { Decimal } from '@prisma/client/runtime/binary';
 import { CustomGraphqlTimestampScalar } from '../../common/scalars/graphql-timestamp.scalar';
 
-@ObjectType()
-export class LedgerDetail {
+@InputType()
+export class LedgerDetailInput {
   @Field(() => GraphQLBigInt)
-  id: bigint;
+  id?: bigint;
 
   @Field(() => GraphQLBigInt)
-  detailCategoryId: bigint;
+  detailCategoryId?: bigint;
 
-  detailType: number;
+  detailType?: number;
 
   @Field(() => GraphQLString)
-  amount: Decimal;
+  amount?: Decimal;
 
   @Field(() => GraphQLString, { nullable: true })
   remark?: string | null;
 
-  year: number;
+  year?: number;
 
-  month: number;
+  month?: number;
 
-  day: number;
+  day?: number;
 
-  weekNumber: number;
+  weekNumber?: number;
 
-  weekDay: number;
+  weekDay?: number;
 
-  dateNumber: number;
-
-  @Field(() => CustomGraphqlTimestampScalar)
-  createTime: Date;
+  dateNumber?: number;
 
   @Field(() => CustomGraphqlTimestampScalar)
-  updateTime: Date;
+  createTime?: Date;
+
+  @Field(() => CustomGraphqlTimestampScalar)
+  updateTime?: Date;
 }

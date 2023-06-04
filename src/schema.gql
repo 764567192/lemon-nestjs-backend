@@ -2,7 +2,6 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
-"""LedgerDetail"""
 type LedgerDetail {
   id: BigInt!
   detailCategoryId: BigInt!
@@ -11,6 +10,13 @@ type LedgerDetail {
   createTime: GraphqlTimestamp!
   updateTime: GraphqlTimestamp!
   detailType: Int!
+  year: Int!
+  month: Int!
+  day: Int!
+  weekNumber: Int!
+  weekDay: Int!
+  dateNumber: Int!
+  detailCategory: DetailCategory!
 }
 
 """
@@ -19,6 +25,14 @@ The `BigInt` scalar type represents non-fractional signed whole numeric values.
 scalar BigInt
 
 scalar GraphqlTimestamp
+
+type LedgerDetailList {
+  amountSum: String
+  dateNumber: Int!
+  weekDay: Int!
+  detailType: Int!
+  ledgerDetails: [LedgerDetail!]!
+}
 
 type DetailCategory {
   id: BigInt!
@@ -32,16 +46,5 @@ type DetailCategory {
 
 type Query {
   detailCategories(detailType: Int!): [DetailCategory!]!
-  ledgerDetails: [LedgerDetail!]!
-}
-
-type Mutation {
-  addLedgerDetail(newLedgerDetailData: NewLedgerDetailInput!): LedgerDetail!
-}
-
-input NewLedgerDetailInput {
-  detailCategoryId: BigInt!
-  amount: String!
-  detailType: Int!
-  remark: String
+  ledgerDetailList: [LedgerDetailList!]!
 }

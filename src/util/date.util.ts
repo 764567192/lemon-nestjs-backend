@@ -6,4 +6,9 @@ export class DateUtil {
     const rezoned: DateTime = local.setZone('Asia/Shanghai');
     return rezoned.toJSDate();
   };
+
+  static nowLocal = () => {
+    const local: DateTime = DateTime.local();
+    return local.setZone('Asia/Shanghai');
+  };
 }
