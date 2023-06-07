@@ -37,12 +37,15 @@ type DetailCategory {
 }
 
 type DetailList {
-  amountSum: String
   dateNumber: Int!
-  createMonth: Int!
-  detailType: Int!
   createWeekDay: Int!
-  ledgerDetail: [LedgerDetail!]!
+  detailTypes: [DetailType!]!
+  ledgerDetails: [LedgerDetail!]!
+}
+
+type DetailType {
+  detailType: Int!
+  amountSum: String!
 }
 
 type DetailCard {

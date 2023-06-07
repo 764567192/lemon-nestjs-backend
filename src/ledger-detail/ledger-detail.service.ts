@@ -37,15 +37,29 @@ export class LedgerDetailService {
     const records = await this.prisma.ledgerDetail.groupBy({
       take: first,
       skip: after,
-      by: ['dateNumber', 'createMonth', 'createWeekDay', 'detailType'],
-      _sum: { amount: true },
+      by: ['dateNumber', 'createWeekDay'],
       where: { createMonth },
-      orderBy: [{ dateNumber: 'desc' }, { detailType: 'asc' }],
+      orderBy: [{ dateNumber: 'desc' }],
     });
     return records.map((record) => ({
       dateNumber: record.dateNumber,
-      createMonth: record.createMonth,
       createWeekDay: record.createWeekDay,
+    }));
+  }
+
+  /**
+   * 详情页 - 列表数据 - 明细类型 detailType 字段解析器
+   * @param dateNumber
+   * @param detailType
+   */
+  async findLedgerDetailByDetailType(dateNumber: number) {
+    const records = await this.prisma.ledgerDetail.groupBy({
+      by: ['dateNumber', 'detailType'],
+      _sum: { amount: true },
+      where: { dateNumber },
+      orderBy: { detailType: 'asc' },
+    });
+    return records.map((record) => ({
       detailType: record.detailType,
       amountSum: record._sum.amount,
     }));

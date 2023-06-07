@@ -3,7 +3,6 @@ import { GraphQLString } from 'graphql/type';
 import { GraphQLBigInt } from 'graphql-scalars';
 import { Decimal } from '@prisma/client/runtime/binary';
 import { CustomGraphqlTimestampScalar } from '../../common/scalars/graphql-timestamp.scalar';
-import { PaginationResult } from '../../common/models/pagination-result.type';
 
 @ObjectType()
 export class LedgerDetail {
