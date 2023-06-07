@@ -28,11 +28,11 @@ model LedgerDetail {
   detailType       Int      @map("detail_type") @db.SmallInt
   amount           Decimal  @db.Decimal(72, 18)
   remark           String?  @db.VarChar(255)
-  year             Int      @db.SmallInt
-  month            Int      @db.SmallInt
-  day              Int      @db.SmallInt
-  weekNumber       Int      @map("week_number") @db.SmallInt
-  weekDay          Int      @map("week_day") @db.SmallInt
+  createYear       Int      @map("create_year") @db.SmallInt
+  createMonth      Int      @map("create_month") @db.SmallInt
+  createDay        Int      @map("create_day") @db.SmallInt
+  createWeekNumber Int      @map("create_week_number") @db.SmallInt
+  createWeekDay    Int      @map("create_week_day") @db.SmallInt
   dateNumber       Int      @map("date_number")
   createTime       DateTime @map("create_time") @db.Timestamptz(6)
   updateTime       DateTime @map("update_time") @db.Timestamptz(6)

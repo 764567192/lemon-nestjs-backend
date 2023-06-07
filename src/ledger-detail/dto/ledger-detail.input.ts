@@ -20,15 +20,15 @@ export class LedgerDetailInput {
   @Field(() => GraphQLString, { nullable: true })
   remark?: string | null;
 
-  year?: number;
+  createYear?: number;
 
-  month?: number;
+  createMonth?: number;
 
-  day?: number;
+  createDay?: number;
 
-  weekNumber?: number;
+  createWeekNumber?: number;
 
-  weekDay?: number;
+  createWeekDay?: number;
 
   dateNumber?: number;
 

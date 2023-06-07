@@ -9,8 +9,9 @@
         "name": "@nestjs/graphql",
         "options": {
           "typeFileNameSuffix": [
-            ".model.ts",
-            ".input.ts"
+            ".input.ts",
+            ".args.ts",
+            ".model.ts"
           ],
           "introspectComments": true
         }

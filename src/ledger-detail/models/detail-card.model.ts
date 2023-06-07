@@ -1,12 +1,10 @@
 import { Field, ObjectType } from '@nestjs/graphql';
-import { Decimal } from '@prisma/client/runtime/binary';
 import { GraphQLString } from 'graphql/type';
+import { Decimal } from '@prisma/client/runtime/binary';
 
 @ObjectType()
-export class LedgerDetailList {
-  dateNumber: number;
-
-  weekDay: number;
+export class DetailCard {
+  createMonth: number;
 
   detailType: number;
 

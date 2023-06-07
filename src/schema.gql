@@ -10,11 +10,11 @@ type LedgerDetail {
   createTime: GraphqlTimestamp!
   updateTime: GraphqlTimestamp!
   detailType: Int!
-  year: Int!
-  month: Int!
-  day: Int!
-  weekNumber: Int!
-  weekDay: Int!
+  createYear: Int!
+  createMonth: Int!
+  createDay: Int!
+  createWeekNumber: Int!
+  createWeekDay: Int!
   dateNumber: Int!
   detailCategory: DetailCategory!
 }
@@ -26,14 +26,6 @@ scalar BigInt
 
 scalar GraphqlTimestamp
 
-type LedgerDetailList {
-  amountSum: String
-  dateNumber: Int!
-  weekDay: Int!
-  detailType: Int!
-  ledgerDetails: [LedgerDetail!]!
-}
-
 type DetailCategory {
   id: BigInt!
   sort: BigInt!
@@ -44,7 +36,23 @@ type DetailCategory {
   iconName: String!
 }
 
+type DetailList {
+  amountSum: String
+  dateNumber: Int!
+  createMonth: Int!
+  detailType: Int!
+  createWeekDay: Int!
+  ledgerDetail: [LedgerDetail!]!
+}
+
+type DetailCard {
+  amountSum: String
+  createMonth: Int!
+  detailType: Int!
+}
+
 type Query {
   detailCategories(detailType: Int!): [DetailCategory!]!
-  ledgerDetailList: [LedgerDetailList!]!
+  detailList(first: Int!, offset: Int!, createMonth: Int!): [DetailList!]!
+  detailCard(createMonth: Int!): [DetailCard!]!
 }

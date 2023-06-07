@@ -3,6 +3,7 @@ import { GraphQLString } from 'graphql/type';
 import { GraphQLBigInt } from 'graphql-scalars';
 import { Decimal } from '@prisma/client/runtime/binary';
 import { CustomGraphqlTimestampScalar } from '../../common/scalars/graphql-timestamp.scalar';
+import { PaginationResult } from '../../common/models/pagination-result.type';
 
 @ObjectType()
 export class LedgerDetail {
@@ -20,15 +21,15 @@ export class LedgerDetail {
   @Field(() => GraphQLString, { nullable: true })
   remark?: string | null;
 
-  year: number;
+  createYear: number;
 
-  month: number;
+  createMonth: number;
 
-  day: number;
+  createDay: number;
 
-  weekNumber: number;
+  createWeekNumber: number;
 
-  weekDay: number;
+  createWeekDay: number;
 
   dateNumber: number;
 
